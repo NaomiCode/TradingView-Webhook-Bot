@@ -54,3 +54,7 @@ def close_trade(symbol):
                     print("position #{} closed, {}".format(order['ticket'],result))
                     return True
     return True
+
+
+def send_order():
+    pass

@@ -14,6 +14,18 @@ from slack_webhook import Slack
 from telegram import Bot
 
 import config
+import MTconfig
+
+
+def job(data):
+    msg = data["msg"].encode("latin-1", "backslashreplace").decode("unicode_escape")
+    try:
+        MTconfig.send_order(
+            msg,
+        )
+    except Exception as e:
+        print("[X] MetaTrader5 Error:\n>", e)
+
 
 
 def send_alert(data):
@@ -95,5 +107,3 @@ def send_alert(data):
                 server.quit()
         except Exception as e:
             print("[X] Email Error:\n>", e)
-if config.trade_enabled:
-    
