@@ -43,3 +43,9 @@ email_port = 465  # SMTP SSL Port (ex. 465)
 email_host = ""  # SMTP host (ex. smtp.gmail.com)
 email_user = ""  # SMTP Login credentials
 email_password = ""  # SMTP Login credentials
+
+# Metatrader 5 Settings
+trade_enabled = True
+account=25115284
+password="gqrtz0lbdm"
+magic = 420420

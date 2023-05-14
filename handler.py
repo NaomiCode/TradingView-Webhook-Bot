@@ -3,7 +3,7 @@
 # Author Name           : fabston                 #
 # File Name             : handler.py              #
 # ----------------------------------------------- #
-
+from MTconfig import *
 import smtplib
 import ssl
 from email.mime.text import MIMEText
@@ -95,3 +95,5 @@ def send_alert(data):
                 server.quit()
         except Exception as e:
             print("[X] Email Error:\n>", e)
+if config.trade_enabled:
+    
